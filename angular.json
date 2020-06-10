@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-seed": {
+    "angular-netlify-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-seed",
+            "outputPath": "dist/angular-netlify-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-seed:build"
+            "browserTarget": "angular-netlify-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-seed:build:production"
+              "browserTarget": "angular-netlify-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-seed:build"
+            "browserTarget": "angular-netlify-demo:build"
           }
         },
         "test": {
@@ -101,5 +101,5 @@
         }
       }
     }},
-  "defaultProject": "angular-seed"
+  "defaultProject": "angular-netlify-demo"
 }
