@@ -27,3 +27,11 @@ jobs:
     - run: yarn prettier:test
     - run: yarn test
     - run: yarn build
+
+    - name: Deploy to netlify
+      uses: nwtgck/actions-netlify@v1.0
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+      with:
+        publish-dir: dist/angular-netlify-demo
